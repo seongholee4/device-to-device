@@ -1,6 +1,14 @@
 # Device-to-Device Clipboard Sync
 
 This project contains a Python script to send, receive, and monitor clipboard content between devices over a network.
+## Requirements
+
+Ensure you have the following Python packages installed:
+
+```sh
+pip install pyperclip
+```
+- The script also uses the built-in `socket` and `time` modules.
 
 ## Features
 
@@ -17,9 +25,9 @@ This project contains a Python script to send, receive, and monitor clipboard co
 
 2. **Enter IP Address and Port**: Depending on the chosen mode, enter the required IP address and port.
 
-   - **send**: Requires the target IP address and port to send the clipboard content.
-   - **receive**: Requires the listening IP address and port to receive the clipboard content.
-   - **monitor**: Requires the target IP address and port to send the clipboard content whenever it changes.
+   - **send**: Requires the `target IP address` and `port` to send the clipboard content.
+   - **receive**: Requires the `listening IP address` and `port` to receive the clipboard content.
+   - **monitor**: Requires the `target IP address` and `port` to send the clipboard content whenever it changes.
 
 ## Example
 
@@ -41,5 +49,11 @@ This project contains a Python script to send, receive, and monitor clipboard co
    Enter the target IP address: 192.168.1.2
    Enter the target port: 65432
    ```
+   ```mathematica
+   Enter the listening IP address: 0.0.0.0
+   Enter the listening port: 65432
+   ```
+
+<br>
 
 *This code was generated with the assistance of **ChatGPT 4o**.*
