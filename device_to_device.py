@@ -35,22 +35,27 @@ def monitor_clipboard(target_ip, target_port):
 
 # User selects the mode of operation
 if __name__ == "__main__":
-    mode = input("Choose mode (send, receive, monitor): ").strip().lower()
-    
-    if mode == "send":
-        target_ip = input("Enter the target IP address: ").strip()
-        target_port = int(input("Enter the target port: ").strip())
-        send_clipboard_content(target_ip, target_port)
-    
-    elif mode == "receive":
-        listen_ip = input("Enter the listening IP address: ").strip()
-        listen_port = int(input("Enter the listening port: ").strip())
-        receive_clipboard_content(listen_ip, listen_port)
-    
-    elif mode == "monitor":
-        target_ip = input("Enter the target IP address: ").strip()
-        target_port = int(input("Enter the target port: ").strip())
-        monitor_clipboard(target_ip, target_port)
-    
-    else:
-        print("Invalid mode selected.")
+    while True:
+        mode = input("Choose mode (send, receive, monitor, exit): ").strip().lower()
+        
+        if mode == "send":
+            target_ip = input("Enter the target IP address: ").strip()
+            target_port = int(input("Enter the target port: ").strip())
+            send_clipboard_content(target_ip, target_port)
+        
+        elif mode == "receive":
+            listen_ip = input("Enter the listening IP address: ").strip()
+            listen_port = int(input("Enter the listening port: ").strip())
+            receive_clipboard_content(listen_ip, listen_port)
+        
+        elif mode == "monitor":
+            target_ip = input("Enter the target IP address: ").strip()
+            target_port = int(input("Enter the target port: ").strip())
+            monitor_clipboard(target_ip, target_port)
+        
+        elif mode == "exit":
+            print("Exiting the program.")
+            break
+        
+        else:
+            print("Invalid mode selected. Please try again.")

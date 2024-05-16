@@ -12,9 +12,9 @@ pip install pyperclip
 
 ## Features
 
-- **send_clipboard_content**: Sends clipboard content to a specified IP address and port.
-- **receive_clipboard_content**: Receives clipboard content from a specified IP address and port.
-- **monitor_clipboard**: Monitors the clipboard and sends content to a specified IP address and port whenever the clipboard content changes.
+- **send_clipboard_content**: Sends clipboard content to a specified `IP address` and `port`.
+- **receive_clipboard_content**: Receives clipboard content from a specified `IP address` and `port`.
+- **monitor_clipboard**: Monitors the clipboard and sends content to a specified `IP address` and `port` whenever the clipboard content changes.
 
 ## Usage
 
@@ -22,6 +22,7 @@ pip install pyperclip
    - `send`
    - `receive`
    - `monitor`
+   - `exit`
 
 2. **Enter IP Address and Port**: Depending on the chosen mode, enter the required IP address and port.
 
@@ -29,7 +30,7 @@ pip install pyperclip
    - **receive**: Requires the `listening IP address` and `port` to receive the clipboard content.
    - **monitor**: Requires the `target IP address` and `port` to send the clipboard content whenever it changes.
 
-## Example
+## Example for `send` mode
 
 1. Run the script:
 
@@ -40,19 +41,57 @@ pip install pyperclip
 2. Choose a mode when prompted:
 
    ```perl
-   Choose mode (send, receive, monitor): send
+   Choose mode (send, receive, monitor, exit): send
    ```
  
 3. Enter the required IP address and port:
 
    ```mathematica
    Enter the target IP address: 192.168.1.2
-   Enter the target port: 65432
+   Enter the target port: 5000
    ```
+
+## Example for `receive` mode
+
+1. Run the script:
+
+    ```sh
+    python device_to_device.py
+    ```
+
+2. Choose the `receive` mode when prompted:
+
+    ```perl
+    Choose mode (send, receive, monitor, exit): receive
+    ```
+    
+3. Enter the listening IP address and port:
+
    ```mathematica
    Enter the listening IP address: 0.0.0.0
-   Enter the listening port: 65432
+   Enter the listening port: 5000
    ```
+
+## Example for `monitor` mode
+1. Run the script:
+
+    ```sh
+    python device_to_device.py
+    ```
+
+2. Choose the `monitor` mode when prompted:
+
+    ```perl
+    Choose mode (send, receive, monitor, exit): monitor
+    ```
+
+3. Enter the target IP address and port:
+
+   ```mathematica
+   Enter the target IP address: 192.168.1.2
+   Enter the target port: 5000
+   ```
+
 
 <br>
 
